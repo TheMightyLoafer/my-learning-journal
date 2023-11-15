@@ -3,3 +3,37 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr; /*mobile layout */
+    grid-template-areas: 
+    "hero"
+    "posts"
+    "footer";
+}
+
+.section-hero {
+    grid-area: hero;
+}
+.section-posts {
+    grid-area: posts;
+}
+.section-footer {
+    grid-area: footer;
+}
+
+@media (min-width: 600px) {
+    .main-content {
+        grid-template-columns: repeat(2, 1fr); /* temporary 2 column layout for medium screens */
+        grid-template-areas: 
+        "hero posts"
+        "hero posts"
+        ". ."
+        "footer footer";
+    }
+}
+
+.section {
+    padding: 20px;
+}
