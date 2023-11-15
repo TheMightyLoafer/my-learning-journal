@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+.flex-container {
+    display: flex;
+}
+
 .main-content {
     display: grid;
     grid-template-columns: 1fr; /*mobile layout */
@@ -14,6 +18,7 @@ body {
 }
 
 .section-hero {
+    background-image: url("https://placehold.co/900x120");
     grid-area: hero;
 }
 .section-posts {
