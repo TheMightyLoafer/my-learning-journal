@@ -2,14 +2,12 @@ html,
 body {
     margin: 0;
     padding: 0;
-}
-
-body {
-    width: 90vw;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 img {
-    width: 90vw;
+    width: 100%;
 }
 
 a {
@@ -31,8 +29,7 @@ a:focus {
 
 .navbar-container {
     justify-content: space-between;
-    margin: 0 1.5em;
-    border-bottom: 1px solid black;
+    margin: 0.825em 1.5em;
 }
 
 .navbar ul {
@@ -48,44 +45,47 @@ a:focus {
     grid-template-areas: 
     "hero"
     "posts"
+    "link"
     "footer";
-    max-width: 90vw;
-}
-
-.section {
-    width: 90vw;
-    margin: 0 1em;
+    grid-gap: 1em;
 }
 
 .section-hero {
     background-image: url("/imgs/man-banner.jpg");
     background-size: cover;
-    margin: 0;
     grid-area: hero;
-    color: whitesmoke
+    color: whitesmoke;
+    padding: 0.825em 1em;
 }
 .section-posts {
     grid-area: posts;
+    max-width: 75vw;
+    justify-self: center;
 }
+.view-more-link {grid-area: link; text-align: center;}
 .section-footer {
     grid-area: footer;
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
 }
 
 @media (min-width: 600px) {
-    .main-content {
-      grid-template-columns: 1fr 1fr; /* 2 column layout for medium and large screens */
-      grid-template-rows: auto auto; /* Dynamically adjust row height based on content */
-      grid-gap: 20px; /* Add spacing between posts */
-      grid-template-areas: 
-"hero hero"
-"post1 post2"
-"footer footer";
-    }
-  
-    .post1 {grid-area: post1;}
-    .post2 {grid-area: post2;}
-  }
 
-.section {
-    padding: 20px;
-}
+   .section-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "post1 post2"
+    "link link"
+    "footer footer";
+    grid-gap: 25px;
+    place-items: center;
+   }
+   
+   .post1 {grid-area: post1;}
+   .post2 {grid-area: post2;} 
+   .view-more-link {grid-area: link}
+    .section-footer {grid-area: footer; text-align: center;}
+
+  }
