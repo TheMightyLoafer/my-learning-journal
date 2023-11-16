@@ -39,40 +39,23 @@ a:focus {
     text-transform: uppercase;
 }
 
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr; /*mobile layout */
-    grid-template-areas: 
-    "hero"
-    "sections"
-    "link"
-    "footer";
-    grid-gap: 1em;
-    background-color: whitesmoke;
-}
-
 .section {
     padding: 0.825em 1em;
     background-color: whitesmoke;
 }
 
 .section-hero {
-    background-image: url("/imgs/man-banner.jpg");
+    background-image: url("https://placehold.co/600x400/png");
     background-size: cover;
-    grid-area: hero;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 }
-.section-posts {
-    grid-area: sections;
-    justify-self: center;
-}
-.view-more-link {grid-area: link; text-align: center;}
+
 .section-footer {
-    grid-area: footer;
-    color: whitesmoke;
     background-color: black;
-    text-align: center;
+    color: wheat;
 }
+
+
 
 @media (min-width: 720px) {
 
@@ -82,19 +65,18 @@ a:focus {
 
    .section-posts {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "hero hero"
-    "post1 post2"
-    "link link"
-    "footer footer";
+    "post post post"
+    "post post post"
+    "link link link"
+    "footer footer footer";
     grid-gap: 25px;
     place-items: center;
     max-width: 90vw;
    }
    
-   .post1 {grid-area: post1;}
-   .post2 {grid-area: post2;} 
+    
    .view-more-link {grid-area: link}
     .section-footer {grid-area: footer; text-align: center;}
     h1 {margin: 0;
