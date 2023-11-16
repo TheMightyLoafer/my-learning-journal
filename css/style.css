@@ -12,12 +12,13 @@ img {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: gray;
 }
 
 a:hover,
 a:focus {
     color: red;
+    cursor: pointer;
 }
 
 .flex-container {
@@ -54,6 +55,12 @@ a:focus {
     background-color: black;
     color: wheat;
 }
+
+p:after {
+    content: "";
+    display: block;
+    width: 100%;
+  }
 
 
 
