@@ -76,15 +76,14 @@ a:focus {
       grid-template-columns: 1fr 1fr; /* 2 column layout for medium and large screens */
       grid-template-rows: auto auto; /* Dynamically adjust row height based on content */
       grid-gap: 20px; /* Add spacing between posts */
+      grid-template-areas: 
+"hero hero"
+"post1 post2"
+"footer footer";
     }
   
-    .section-hero {
-      grid-area: hero hero; /* Expand hero section to span two columns */
-    }
-  
-    .section-posts {
-      max-height: none; /* Remove max-height restriction */
-    }
+    .post1 {grid-area: post1;}
+    .post2 {grid-area: post2;}
   }
 
 .section {
