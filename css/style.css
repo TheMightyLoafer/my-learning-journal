@@ -48,10 +48,12 @@ a:focus {
     "link"
     "footer";
     grid-gap: 1em;
+    background-color: whitesmoke;
 }
 
 .section {
     padding: 0.825em 1em;
+    background-color: whitesmoke;
 }
 
 .section-hero {
@@ -62,7 +64,6 @@ a:focus {
 }
 .section-posts {
     grid-area: sections;
-    max-width: 75vw;
     justify-self: center;
 }
 .view-more-link {grid-area: link; text-align: center;}
@@ -73,22 +74,36 @@ a:focus {
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 720px) {
+
+    .section-hero {
+        height: 40vh;
+    }
 
    .section-posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
+    "hero hero"
     "post1 post2"
     "link link"
     "footer footer";
     grid-gap: 25px;
     place-items: center;
+    max-width: 90vw;
    }
    
    .post1 {grid-area: post1;}
    .post2 {grid-area: post2;} 
    .view-more-link {grid-area: link}
     .section-footer {grid-area: footer; text-align: center;}
+    h1 {margin: 0;
+        padding: 0;}
+    p { margin: 0;
+        padding: 0;}
+
+    .title-header {
+        margin: 25vh 0;
+    }
 
   }
