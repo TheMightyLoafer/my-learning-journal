@@ -8,6 +8,20 @@ body {
     width: 90vw;
 }
 
+img {
+    width: 90vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    color: red;
+}
+
 .flex-container {
     display: flex;
     width: 90vw;
@@ -24,10 +38,8 @@ body {
 .navbar ul {
     display: inline-flex;
     gap: 20px;
-}
-
-.navbar ul {
     list-style: none;
+    text-transform: uppercase;
 }
 
 .main-content {
@@ -40,9 +52,17 @@ body {
     max-width: 90vw;
 }
 
+.section {
+    width: 90vw;
+    margin: 0 1em;
+}
+
 .section-hero {
-    background-image: url("https://placehold.co/900x120");
+    background-image: url("/imgs/man-banner.jpg");
+    background-size: cover;
+    margin: 0;
     grid-area: hero;
+    color: whitesmoke
 }
 .section-posts {
     grid-area: posts;
@@ -53,14 +73,19 @@ body {
 
 @media (min-width: 600px) {
     .main-content {
-        grid-template-columns: repeat(2, 1fr); /* temporary 2 column layout for medium screens */
-        grid-template-areas: 
-        "hero posts"
-        "hero posts"
-        ". ."
-        "footer footer";
+      grid-template-columns: 1fr 1fr; /* 2 column layout for medium and large screens */
+      grid-template-rows: auto auto; /* Dynamically adjust row height based on content */
+      grid-gap: 20px; /* Add spacing between posts */
     }
-}
+  
+    .section-hero {
+      grid-area: hero hero; /* Expand hero section to span two columns */
+    }
+  
+    .section-posts {
+      max-height: none; /* Remove max-height restriction */
+    }
+  }
 
 .section {
     padding: 20px;
