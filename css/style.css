@@ -44,10 +44,14 @@ a:focus {
     grid-template-columns: 1fr; /*mobile layout */
     grid-template-areas: 
     "hero"
-    "posts"
+    "sections"
     "link"
     "footer";
     grid-gap: 1em;
+}
+
+.section {
+    padding: 0.825em 1em;
 }
 
 .section-hero {
@@ -55,10 +59,9 @@ a:focus {
     background-size: cover;
     grid-area: hero;
     color: whitesmoke;
-    padding: 0.825em 1em;
 }
 .section-posts {
-    grid-area: posts;
+    grid-area: sections;
     max-width: 75vw;
     justify-self: center;
 }

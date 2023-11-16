@@ -1,0 +1,14 @@
+.section-hero {
+    background-image: none;
+    color: black;
+}
+
+.profile-img {
+    border-radius: 100%;
+    width: 25%;
+}
+
+.section-hero h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
