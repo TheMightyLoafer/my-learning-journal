@@ -30,7 +30,10 @@ a:focus {
 
 .navbar-container {
     justify-content: space-between;
-    margin: 0.825em 1.5em;
+}
+
+.navbar-container i {
+    align-self: center;
 }
 
 .navbar ul {
@@ -38,6 +41,7 @@ a:focus {
     gap: 20px;
     list-style: none;
     text-transform: uppercase;
+    flex-wrap: wrap;
 }
 
 .section {
