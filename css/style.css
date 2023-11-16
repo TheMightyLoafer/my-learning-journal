@@ -4,8 +4,30 @@ body {
     padding: 0;
 }
 
+body {
+    width: 90vw;
+}
+
 .flex-container {
     display: flex;
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    justify-content: space-between;
+    margin: 0 1.5em;
+    border-bottom: 1px solid black;
+}
+
+.navbar ul {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.navbar ul {
+    list-style: none;
 }
 
 .main-content {
@@ -15,6 +37,7 @@ body {
     "hero"
     "posts"
     "footer";
+    max-width: 90vw;
 }
 
 .section-hero {
