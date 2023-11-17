@@ -123,4 +123,12 @@ p:after {
         margin: 25vh 0;
     }
 
+    .post {
+        margin: 1em 0;
+    }
+
+    .post h3 {
+        margin: 0;
+    }
+
   }
