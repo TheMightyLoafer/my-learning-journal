@@ -33,6 +33,11 @@ a:hover,
 a:focus {
     color: red;
     cursor: pointer;
+    font-size: 1.15em;
+}
+
+.post a {
+    text-decoration: underline;
 }
 
 .navbar-container {
