@@ -1,14 +1,47 @@
+/* Set a maximum width for the overall layout */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Media query for larger resolutions */
+  @media (min-width: 1200px) {
+    body {
+      width: 100%;
+    }
+  }
+
 .section-hero {
     background-image: none;
     color: black;
 }
 
-.profile-img {
-    border-radius: 100%;
-    width: 25%;
-}
-
 .section h4 {
     text-align: center;
     text-transform: uppercase;
+}
+
+.profile-img {
+    border-radius: 100%;
+}
+
+@media (min-width: 720px) {
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "profile intro intro"
+        "purpose purpose purpose"
+        "journey journey journey";
+    }
+
+    .section-img {
+        grid-area: profile;
+    }
+    .intro-section {
+        grid-area: intro;
+        padding: 5em;
+    }
+    .purpose-section {grid-area: purpose;}
+    .journey-section {grid-area: journey;}
 }
